@@ -21,6 +21,9 @@ namespace InventorySystem
             Console.WriteLine("2: View products");
             Console.WriteLine("3: Edit product");
             Console.WriteLine("4: Delete a product");
+            Console.WriteLine("5: Search a product");
+
+
 
 
             Console.Write("Your selection: ");
@@ -39,6 +42,9 @@ namespace InventorySystem
                     break;
                 case "4":
                     DeleteProduct();
+                    break;
+                case "5":
+                    searchOfProduct();
                     break;
 
                 default:
@@ -75,7 +81,7 @@ namespace InventorySystem
 
             string nameOfProduct = Console.ReadLine();
 
-            inventory.UpdaupdateProduct(nameOfProduct);
+            inventory.UpdateProduct(nameOfProduct);
 
             inventory.inventoryProduct();
             ShowMainMenu();
@@ -87,7 +93,16 @@ namespace InventorySystem
             Console.WriteLine("enter the name of product");
             string name = Console.ReadLine();
 
-            inventory.deleteProduct(name);
+            inventory.deleteAProduct(name);
+            ShowMainMenu();
+        }
+
+
+        public void searchOfProduct()
+        {
+            Console.WriteLine("enter the name of product");
+            string name = Console.ReadLine();
+            inventory.SearchOfProduct(name);
             ShowMainMenu();
         }
     }

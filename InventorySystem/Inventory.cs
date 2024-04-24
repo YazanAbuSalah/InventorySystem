@@ -25,7 +25,7 @@ namespace InventorySystem
             }
         }
 
-        public void UpdaupdateProduct(string  nameOfProduct ) 
+        public void UpdateProduct(string  nameOfProduct ) 
         {
             foreach (var product in products)
             {
@@ -60,7 +60,7 @@ namespace InventorySystem
         }
 
 
-        public void deleteProduct(string name)
+        public void deleteAProduct(string name)
         {
             Product productToRemove = null;
             foreach(var product in products)
@@ -77,6 +77,22 @@ namespace InventorySystem
             
         }
 
+
+
+        public void SearchOfProduct(string name)
+        {
+            foreach (var product in products)
+            {
+                if (product.Name == name)
+                {
+                    Console.WriteLine($"Product name : {product.Name}  ,  Product name : {product.Price}   ,   Product name : {product.Quantity} ");
+                }
+                else
+                {
+                    Console.WriteLine("This product does not exist");
+                }
+            }
+        }
 
 
 
