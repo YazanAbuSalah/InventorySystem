@@ -60,6 +60,24 @@ namespace InventorySystem
         }
 
 
+        public void deleteProduct(string name)
+        {
+            Product productToRemove = null;
+            foreach(var product in products)
+            {
+                if (product.Name == name)
+                {
+                    productToRemove = product;
+                }
+            }
+            if(productToRemove != null)
+            {
+                products.Remove(productToRemove);
+            }
+            
+        }
+
+
 
 
     }
