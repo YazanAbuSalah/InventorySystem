@@ -1,0 +1,41 @@
+# Visual Studio files
+.vs/
+*.vscode/
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+/bin/
+/obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.zip
+
+# NuGet packages
+/packages/
+*.nupkg
+*.paket.template
+paket-files/
+
+# Resharper
+_ReSharper*/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.suo
+*.userprefs
+*.usertasks
+
+# Mac-specific
+.DS_Store
+
+# Miscellaneous
+Thumbs.db
